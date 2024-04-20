@@ -33,3 +33,19 @@ For this project, I utilized the free 32GB Azure account available to set up the
 
 **Reliability:** Azure SQL Database provides high availability and data redundancy features to ensure the reliability and durability of the stored data.<br>
 By leveraging Azure SQL Database, I was able to create a robust and reliable data storage solution for the Top 200 Global Chart Automation project, enabling seamless data management and analysis.
+
+## Automation Process
+Every Friday, a Selenium Python script is automated using the Windows Task Scheduler to download and update the server. This ensures that the latest data from the Top 200 Global Chart is fetched and stored in the Azure SQL Database, ready for analysis in the Power BI file.
+
+### Steps Involved:
+**Selenium Script Execution:** A Python script leveraging Selenium is scheduled to run every Friday using the Windows Task Scheduler. This script automates the process of accessing the Spotify website, downloading the Top 200 Global Chart data, and saving it locally.<br>
+**Updating the Server:** Once the data is downloaded, the script updates the Azure SQL Database server with the latest information. This ensures that the database remains up-to-date with the most recent music trends.<br>
+**Power BI File Update:** After the server is updated, the Power BI file is automatically refreshed to reflect the changes in the dataset. This ensures that the visualizations and insights provided in the Power BI file are always based on the latest data.
+
+### Benefits:
+**Efficiency:** Automating the data retrieval and update process saves time and effort by eliminating the need for manual intervention.<br>
+**Consistency:** By scheduling the script to run at regular intervals, we ensure that the database and Power BI file are consistently updated with the latest information.<br>
+**Timeliness:** Having the data updated every Friday ensures that analysts and stakeholders have access to the most recent insights for informed decision-making.
+
+
+By automating the process using the Windows Task Scheduler, we maintain a seamless and efficient workflow for keeping our data and analysis up-to-date.
